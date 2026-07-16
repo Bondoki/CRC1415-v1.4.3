@@ -93,7 +93,7 @@ FROM builder AS docs
 
 WORKDIR /app
 
-ARG NOMAD_DOCS_REPO="https://github.com/FAIRmat-NFDI/nomad-docs.git"
+ARG NOMAD_DOCS_REPO="https://github.com/Bondoki/nomad-docs-crc1415.git"
 ARG NOMAD_DOCS_REPO_REF=""
 
 # Clones the documentation repository, checks out the version matching nomad-lab
@@ -127,7 +127,8 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     PYTHONPATH=src uv run --no-sync mkdocs build && \
     # Move built site to final destination \
     mkdir -p /app/built_docs && \
-    cp -r site/* /app/built_docs
+    cp -r site/* /app/built_docs && \
+    mkdir -p /app/built_logo && cp docs/assets/nomad-oasis.png /app/built_logo
 
 FROM builder AS gpu_action_builder
 
@@ -155,6 +156,7 @@ COPY --chown=nomad:${UID} --from=builder /opt/venv /opt/venv
 COPY configs/nomad.yaml nomad.yaml
 COPY pyproject.toml uv.lock /opt/
 COPY --chown=nomad:${UID} --from=docs /app/built_docs /opt/venv/lib/python${PYTHON_VERSION}/site-packages/nomad/app/static/docs
+COPY --chown=nomad:${UID} --from=docs /app/built_logo /opt/venv/lib/python${PYTHON_VERSION}/site-packages/nomad/app/static/gui
 
 RUN mkdir -p /app/.volumes/fs \
  && chown -R nomad:${UID} /app \
