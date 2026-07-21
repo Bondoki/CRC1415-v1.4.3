@@ -21,7 +21,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
 dependencies = [
-  "nomad-lab[infrastructure]==1.4.3",
+  "nomad-lab[infrastructure]==1.4.3.post1",
 ]
 
 [project.urls]
@@ -84,7 +84,7 @@ jupyter = ["jupyter-events"]
 gpu-action = []
 cpu-action = []
 
-dev = ["nomad-lab[infrastructure, dev]==1.4.3"]
+dev = ["nomad-lab[infrastructure, dev]==1.4.3.post1"]
 
 [tool.uv]
 extra-index-url = [
