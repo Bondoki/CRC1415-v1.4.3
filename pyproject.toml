@@ -75,10 +75,10 @@ plugins = [
   #"crc1415plugin @ git+https://github.com/Bondoki/NOMADOasisPlugin.git@main",
   #"crc1415_about @ git+https://github.com/Bondoki/crc1415_about.git@main",
   #"crc1415_examples @ git+https://github.com/Bondoki/crc1415_examples@main"
-  "crc1415plugin @ git+https://github.com/Bondoki/NOMADOasisPlugin.git@dce9decbeba98be89fd4841d9a1732c08ee5be18",
-  "crc1415_about @ git+https://github.com/Bondoki/crc1415_about.git@bb1e5a51a78604680803c9b8ddd21fbbe03ba7de",
-  "crc1415_examples @ git+https://github.com/Bondoki/crc1415_examples@59facba1672e1a9bfad6415a22b99518620dee0d",
-  "aifparser @ git+https://github.com/CRC1415/AdsorptionInformationFormat-ParserNOMAD", #a99e91fbb0831f172a32ebf6f423c8f70bed8e7b",
+  "crc1415plugin @ git+https://github.com/CRC1415/NOMAD-CRC1415-Plugin", #.git@6024172d85f3ff788abe399170eef76508ad17ae",
+  "crc1415_about @ git+https://github.com/CRC1415/crc1415_about", #@bb1e5a51a78604680803c9b8ddd21fbbe03ba7de",
+  "crc1415_examples @ git+https://github.com/CRC1415/crc1415_examples", #@59facba1672e1a9bfad6415a22b99518620dee0d",
+  "aifparser @ git+https://github.com/CRC1415/AdsorptionInformationFormat-ParserNOMAD", #c308d4a07ab4946fa99fa64c3bff46a912010a7e",
 ]
 jupyter = ["jupyter-events"]
 gpu-action = []
