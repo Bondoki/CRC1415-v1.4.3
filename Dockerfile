@@ -102,33 +102,35 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=uv.lock,target=uv.lock \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
     set -ex && \
-    # Clone the documentation repository \
     echo "Cloning from: ${NOMAD_DOCS_REPO}" && \
-    git clone "${NOMAD_DOCS_REPO}" docs_repo && cd docs_repo && \
-    # Determine which version to build \
+    git clone "${NOMAD_DOCS_REPO}" docs_repo && \
+    cd docs_repo && \
     if [ -n "${NOMAD_DOCS_REPO_REF}" ]; then \
-        # Use explicitly provided ref \
-        echo "Checking out provided ref: ${NOMAD_DOCS_REPO_REF}"; \
-        git checkout "${NOMAD_DOCS_REPO_REF}"; \
+        echo "Checking out provided ref: ${NOMAD_DOCS_REPO_REF}" ; \
+        git checkout "${NOMAD_DOCS_REPO_REF}" ; \
     else \
-        # Match documentation version to nomad-lab version \
         NOMAD_VERSION=$(uv tree --package nomad-lab | grep "^nomad-lab v" | sed 's/^nomad-lab //'); \
         echo "Detected nomad-lab version: ${NOMAD_VERSION}"; \
         if git rev-parse --verify "refs/tags/${NOMAD_VERSION}" >/dev/null 2>&1; then \
-            echo "Tag ${NOMAD_VERSION} found. Checking out."; \
-            git checkout "${NOMAD_VERSION}"; \
+            echo "Tag ${NOMAD_VERSION} found. Checking out." ; \
+            git checkout "${NOMAD_VERSION}" ; \
         else \
-            echo "Tag ${NOMAD_VERSION} not found. Checking out main branch."; \
-            git checkout main; \
+            echo "Tag ${NOMAD_VERSION} not found. Checking out main branch." ; \
+            git checkout main ; \
         fi; \
     fi && \
-    # Install and build documentation \
+    echo "Repo at:" && git log -1 --oneline && \
+    echo "Listing top-level:" && ls -la && \
     uv pip install . && \
     PYTHONPATH=src uv run --no-sync mkdocs build && \
-    # Move built site to final destination \
+    echo "After mkdocs build, listing:" && ls -la && \
+    echo "Listing site dir:" && (ls -la site || true) && \
     mkdir -p /app/built_docs && \
     cp -r site/* /app/built_docs && \
-    mkdir -p /app/built_logo && cp docs/assets/nomad-oasis.png /app/built_logo
+    mkdir -p /app/built_logo && \
+    ls -la docs/assets || true && \
+    cp docs/assets/nomad-oasis.png /app/built_logo
+
 
 FROM builder AS gpu_action_builder
 
