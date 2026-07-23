@@ -93,7 +93,7 @@ FROM builder AS docs
 
 WORKDIR /app
 
-ARG NOMAD_DOCS_REPO="https://github.com/Bondoki/nomad-docs-crc1415.git"
+ARG NOMAD_DOCS_REPO="https://github.com/CRC1415/nomad-docs.git"
 ARG NOMAD_DOCS_REPO_REF=""
 
 # Clones the documentation repository, checks out the version matching nomad-lab
