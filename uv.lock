@@ -5540,6 +5540,7 @@ plugins = [
     { name = "nomad-normalizer-plugin-system" },
     { name = "nomad-north-apmtools" },
     { name = "nomad-north-fiji" },
+    { name = "nomad-north-gwyddion" },
     { name = "nomad-north-jupyter" },
     { name = "nomad-north-nionswift" },
     { name = "nomad-north-pyiron" },
@@ -5590,6 +5591,7 @@ requires-dist = [
     { name = "nomad-normalizer-plugin-system", marker = "extra == 'plugins'", specifier = "==1.0.5" },
     { name = "nomad-north-apmtools", marker = "extra == 'plugins'", specifier = "==0.1.4" },
     { name = "nomad-north-fiji", marker = "extra == 'plugins'", specifier = "==0.1.4" },
+    { name = "nomad-north-gwyddion", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/nomad-north-gwyddion" },
     { name = "nomad-north-jupyter", marker = "extra == 'plugins'", specifier = ">=0.2.6" },
     { name = "nomad-north-nionswift", marker = "extra == 'plugins'", specifier = "==0.1.4" },
     { name = "nomad-north-pyiron", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-north-pyiron.git?rev=0b00b44b0ed0a927b5eca4eedd1a3571abdbf5ea" },
@@ -5860,6 +5862,14 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/dd/96/50875d75c0c3515ec37547c14796464951485bc36e1a6f676ac3c8749aa4/nomad_north_fiji-0.1.4.tar.gz", hash = "sha256:6535e24f0305b262ad10106f1a93d53241f22e92e318954f4e41738f7bf46e76", size = 151007, upload-time = "2026-07-02T14:26:23.767Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2a/94/b6c75a28f40df91b6b44454ba7fd3ee60dacad218ebcb22bbc61c59f8975/nomad_north_fiji-0.1.4-py3-none-any.whl", hash = "sha256:2e4b27f764ccd704fdb051769f7347c28275d685d03788fe66c42ea00fad40a7", size = 49551, upload-time = "2026-07-02T14:26:22.557Z" },
+]
+
+[[package]]
+name = "nomad-north-gwyddion"
+version = "0.1.0"
+source = { git = "https://github.com/CRC1415/nomad-north-gwyddion#72389e2b6ab27a67f149ce56c4ef9777410eae29" }
+dependencies = [
+    { name = "nomad-lab" },
 ]
 
 [[package]]
