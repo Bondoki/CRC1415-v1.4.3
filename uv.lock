@@ -1571,7 +1571,7 @@ toml = [
 [[package]]
 name = "crc1415-about"
 version = "0.1.0"
-source = { git = "https://github.com/Bondoki/crc1415_about.git?rev=bb1e5a51a78604680803c9b8ddd21fbbe03ba7de#bb1e5a51a78604680803c9b8ddd21fbbe03ba7de" }
+source = { git = "https://github.com/CRC1415/crc1415_about#bb1e5a51a78604680803c9b8ddd21fbbe03ba7de" }
 dependencies = [
     { name = "fastapi" },
     { name = "nomad-lab" },
@@ -1580,7 +1580,7 @@ dependencies = [
 [[package]]
 name = "crc1415-examples"
 version = "0.2.0"
-source = { git = "https://github.com/Bondoki/crc1415_examples?rev=59facba1672e1a9bfad6415a22b99518620dee0d#59facba1672e1a9bfad6415a22b99518620dee0d" }
+source = { git = "https://github.com/CRC1415/crc1415_examples#59facba1672e1a9bfad6415a22b99518620dee0d" }
 dependencies = [
     { name = "nomad-lab" },
 ]
@@ -1588,7 +1588,7 @@ dependencies = [
 [[package]]
 name = "crc1415plugin"
 version = "0.2.0"
-source = { git = "https://github.com/Bondoki/NOMADOasisPlugin.git?rev=dce9decbeba98be89fd4841d9a1732c08ee5be18#dce9decbeba98be89fd4841d9a1732c08ee5be18" }
+source = { git = "https://github.com/CRC1415/NOMAD-CRC1415-Plugin#6024172d85f3ff788abe399170eef76508ad17ae" }
 dependencies = [
     { name = "nomad-lab" },
     { name = "pydantic" },
@@ -5571,9 +5571,9 @@ plugins = [
 [package.metadata]
 requires-dist = [
     { name = "aifparser", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/AdsorptionInformationFormat-ParserNOMAD" },
-    { name = "crc1415-about", marker = "extra == 'plugins'", git = "https://github.com/Bondoki/crc1415_about.git?rev=bb1e5a51a78604680803c9b8ddd21fbbe03ba7de" },
-    { name = "crc1415-examples", marker = "extra == 'plugins'", git = "https://github.com/Bondoki/crc1415_examples?rev=59facba1672e1a9bfad6415a22b99518620dee0d" },
-    { name = "crc1415plugin", marker = "extra == 'plugins'", git = "https://github.com/Bondoki/NOMADOasisPlugin.git?rev=dce9decbeba98be89fd4841d9a1732c08ee5be18" },
+    { name = "crc1415-about", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/crc1415_about" },
+    { name = "crc1415-examples", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/crc1415_examples" },
+    { name = "crc1415plugin", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/NOMAD-CRC1415-Plugin" },
     { name = "jupyter-events", marker = "extra == 'jupyter'" },
     { name = "nomad-aitoolkit", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8" },
     { name = "nomad-catalysis", marker = "extra == 'plugins'", specifier = "==1.0.5" },
@@ -5679,9 +5679,9 @@ dependencies = [
     { name = "xarray", version = "2025.6.1", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
     { name = "xarray", version = "2026.7.0", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
 ]
-sdist = { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/9252c303449fffb9028548e5242214bb64b29d9250ee0aae8a71c8fc85b7d55b/nomad_lab-1.4.3.post1.tar.gz", hash = "sha256:9252c303449fffb9028548e5242214bb64b29d9250ee0aae8a71c8fc85b7d55b" }
+sdist = { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/b3ce1b33703ca3958a32050e60cb9d21b72a3c7b36fe459c9e7297e4df1ba68c/nomad_lab-1.4.3.post1.tar.gz", hash = "sha256:b3ce1b33703ca3958a32050e60cb9d21b72a3c7b36fe459c9e7297e4df1ba68c" }
 wheels = [
-    { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/ecb39d99accd2834d60d969c980da037b5984d6716843f96214a056f586b1a9c/nomad_lab-1.4.3.post1-py3-none-any.whl", hash = "sha256:ecb39d99accd2834d60d969c980da037b5984d6716843f96214a056f586b1a9c" },
+    { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/7f50cc982119071680634883d918a9678a32d716559048b91e6fcc1f60721e65/nomad_lab-1.4.3.post1-py3-none-any.whl", hash = "sha256:7f50cc982119071680634883d918a9678a32d716559048b91e6fcc1f60721e65" },
 ]
 
 [package.optional-dependencies]
