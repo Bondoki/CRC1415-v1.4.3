@@ -5591,7 +5591,7 @@ requires-dist = [
     { name = "nomad-normalizer-plugin-system", marker = "extra == 'plugins'", specifier = "==1.0.5" },
     { name = "nomad-north-apmtools", marker = "extra == 'plugins'", specifier = "==0.1.4" },
     { name = "nomad-north-fiji", marker = "extra == 'plugins'", specifier = "==0.1.4" },
-    { name = "nomad-north-gwyddion", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/nomad-north-gwyddion" },
+    { name = "nomad-north-gwyddion", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/nomad-north-gwyddion.git?rev=5ef649a604f37957ab9ae7c7d20efc70ff95b26b" },
     { name = "nomad-north-jupyter", marker = "extra == 'plugins'", specifier = ">=0.2.6" },
     { name = "nomad-north-nionswift", marker = "extra == 'plugins'", specifier = "==0.1.4" },
     { name = "nomad-north-pyiron", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-north-pyiron.git?rev=0b00b44b0ed0a927b5eca4eedd1a3571abdbf5ea" },
@@ -5866,8 +5866,8 @@ wheels = [
 
 [[package]]
 name = "nomad-north-gwyddion"
-version = "0.1.0"
-source = { git = "https://github.com/CRC1415/nomad-north-gwyddion#72389e2b6ab27a67f149ce56c4ef9777410eae29" }
+version = "0.0.post1.dev14+g5ef649a60"
+source = { git = "https://github.com/CRC1415/nomad-north-gwyddion.git?rev=5ef649a604f37957ab9ae7c7d20efc70ff95b26b#5ef649a604f37957ab9ae7c7d20efc70ff95b26b" }
 dependencies = [
     { name = "nomad-lab" },
 ]
