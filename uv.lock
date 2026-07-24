@@ -1297,8 +1297,8 @@ dependencies = [
 
 [[package]]
 name = "crc1415plugin"
-version = "0.2.0"
-source = { git = "https://github.com/CRC1415/NOMAD-CRC1415-Plugin#6024172d85f3ff788abe399170eef76508ad17ae" }
+version = "0.2.1"
+source = { git = "https://github.com/CRC1415/NOMAD-CRC1415-Plugin.git?rev=bd0c6938ae9dec4cbd474d07e117dc2d8a4bf418#bd0c6938ae9dec4cbd474d07e117dc2d8a4bf418" }
 dependencies = [
     { name = "nomad-lab" },
     { name = "pydantic" },
@@ -4642,7 +4642,7 @@ requires-dist = [
     { name = "aifparser", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/AdsorptionInformationFormat-ParserNOMAD" },
     { name = "crc1415-about", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/crc1415_about" },
     { name = "crc1415-examples", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/crc1415_examples" },
-    { name = "crc1415plugin", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/NOMAD-CRC1415-Plugin" },
+    { name = "crc1415plugin", marker = "extra == 'plugins'", git = "https://github.com/CRC1415/NOMAD-CRC1415-Plugin.git?rev=bd0c6938ae9dec4cbd474d07e117dc2d8a4bf418" },
     { name = "jupyter-events", marker = "extra == 'jupyter'" },
     { name = "nomad-aitoolkit", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8" },
     { name = "nomad-catalysis", marker = "extra == 'plugins'", specifier = "==1.0.5" },
