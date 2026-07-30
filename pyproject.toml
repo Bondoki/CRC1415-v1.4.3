@@ -68,7 +68,7 @@ plugins = [
   "nomad-aitoolkit @ git+https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git@b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8",
   "nomad-external-eln-integrations @ git+https://github.com/FAIRmat-NFDI/nomad-external-eln-integrations@982bbb3ed327d0256da59433e9bd66972cb8a86d",
   "pdf2doi @ git+https://github.com/sherjeelshabih/pdf2doi.git@fix-missing-config-in-wheel", # temporarily needed for solar cell database
-  "perovskite-solar-cell-database[extraction]==1.2.13",
+  "perovskite-solar-cell-database[extraction]==1.2.14",
   "nomad-ml-workflows==0.0.6",
   #"crc1415plugin @ git+https://github.com/Bondoki/NOMADOasisPlugin.git@c46f98a6eb936dc3e650238ea9f571a7bc30a498",
   #"crc1415_about @ git+https://github.com/Bondoki/crc1415_about.git@d5aaa7a3db9ceb40626a8913f5fdb41ffacdb5ae"
